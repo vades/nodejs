@@ -71,6 +71,34 @@ tsc --version
 tsc --init
 ```
 This automatically create `tsconfig.json` file with specific compile options
+
+## Using Typescript with Node.js
+Create dist folder:
+```
+mkdir dist
+```
+Run the following command to install typescript localy:
+```
+npm install -D typescript
+```
+Create an `index.ts` file inside `src` folder and write some code. For example:
+```
+function sumMe(nomOne:number, numTwo:number){
+    return numOne + numTwo;
+}
+console.log(sumMe(2,5));
+```
+and run the following command to build Typescript into JavaScript:
+```
+tsc
+```
+Now execute the JavaScript code:
+```
+$ node dist/index.js
+7
+```
+
 ## Links
+- [How to use TypeScript with Node.js](https://www.section.io/engineering-education/how-to-use-typescript-with-nodejs/)
 - Official Website of [Node.js](https://nodejs.org/)
 - [Guides](https://nodejs.org/en/docs/guides/)

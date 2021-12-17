@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/vades/nodejs/issues"
   },
-  "homepage": "https://github.com/vades/nodejs#readme"
+  "homepage": "https://github.com/vades/nodejs#readme",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
 }
