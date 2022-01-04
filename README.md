@@ -58,9 +58,9 @@ This will generate file with the default values.
 }
 ```
 ## Setting up Typescript
-### Install the Typescript globally
+### Install the Typescript and modules globally
 ```
-npm install -g typescript
+npm install -g typescript nodemon ts-node prettier
 ```
 ### Check if Typescript compiler is installed
 ```
@@ -96,6 +96,24 @@ Now execute the JavaScript code:
 ```
 $ node dist/index.js
 7
+```
+
+## Settings enviornment
+Open `package.json` and replace
+```
+"test": "echo \"Error: no test specified\" && exit 1"
+```
+with
+```
+"build": "rm -rf build && prettier --write source/ && tsc"
+```
+Install packages:
+```
+npm install body-parser dotenv express
+```
+Install type definitions:
+```
+npm install --save-dev @types/body-parser @types/dotenv @types/express
 ```
 
 ## Links
