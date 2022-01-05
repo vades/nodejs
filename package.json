@@ -6,7 +6,8 @@
   "scripts": {
     "test": "ts-node-dev ./src --watch",
     "dev": "nodemon src/index.ts",
-    "build": "tsc -p"
+    "build": "tsc -p",
+    "js": "dist/index.js"
   },
   "repository": {
     "type": "git",

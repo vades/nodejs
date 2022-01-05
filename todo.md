@@ -1,7 +1,8 @@
 NODEJS TODO
 ===
 - [x] Configure Typescript: nodemon, tsc watch etc
-- [ ] Watch SCSS
+- [ ] Read die and create file
 - [ ] Webpack
+- [ ] Watch SCSS
 - [ ] Divide to projects
 - [ ] Set basic configuration: dotenv, etc
