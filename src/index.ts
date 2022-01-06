@@ -11,11 +11,10 @@ console.log(appRoot);
 try {
   const album = new Album();
   const result = album.init();
-  console.debug(result);
+  Logger.error('Message', result, 'Namespace');
 } catch (error) {
-  Logger.catch(error);
+  Logger.catch(error, false);
   process.exit();
 }
-//Logger.info('Name 2', config.get('appName'));
 
 console.log(appRoot);
