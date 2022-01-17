@@ -7,9 +7,20 @@ import { FileClass as File } from '../lib/file.class';
 import { album as cfg } from '../config/album';
 export class AlbumService {
   albumsOutput: any = [];
-  constructor() {}
+  //console.log(array);
+  albums: any = [];
+  constructor() { }
+
+
+
 
   public init(): void {
+    const dirOutput = this.readAlbumDir();
+    this.parseDirectoryData(dirOutput);
+    //this.generateAlbumOutput(dirOutput);
+    return;
+  }
+  public _init(): void {
     Logger.info('Reading images from ', cfg.dirPath, 'AlbumService');
     const files = File.recursiveImageList(cfg.dirPath, [], cfg.uri);
     this.build(files);
@@ -27,11 +38,11 @@ export class AlbumService {
       let filePath = file.substr(file.indexOf('/') + 1);
       // Removing dirPath
       filePath = filePath.replace(cfg.dirPath + '/', '');
-      this.buildeAlbums(filePath);
+      this.buildAlbums(filePath);
     });
   }
 
-  private buildeAlbums(filePath: string): void {
+  private buildAlbums(filePath: string): void {
     const array = filePath.split('/');
     const albumId = array[0];
     const album: any = {
@@ -47,7 +58,26 @@ export class AlbumService {
     if (!albumExists) {
       this.albumsOutput['albums'].push(album);
     }
+  }
+  private readAlbumDir(): [] {
+    const data = fs.readFileSync('src/data/albums.json', 'utf8');
+    const result = JSON.parse(data);
+    Logger.info('Reading images from', cfg.dirPath, 'AlbumService');
+    //const result = File.recursiveImageList(album.dirPath, [],cfg.uri);
 
-    //console.log(array);
+    return result;
+    /* const data = JSON.stringify(result, null, 2);
+    const file = fs.writeFileSync(album.outputFile, data); */
+  }
+
+  private parseDirectoryData(data: []) {
+    data.forEach((value) => {
+      console.log(value);
+    });
+  }
+
+  private generateAlbumOutput(data: []) {
+    Logger.info(`Writing data to  JSON file ${cfg.outputFile}`, data, 'AlbumService');
+    const result = JSON.stringify(data, null, 2);
   }
 }
