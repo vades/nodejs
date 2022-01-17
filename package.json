@@ -2,12 +2,12 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "Node.js is an open source platform built on Chrome's JavaScript runtime ",
-  "main": "src/index.ts",
+  "main": "src/app.ts",
   "scripts": {
     "test": "ts-node-dev ./src --watch",
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon src/app.ts",
     "build": "tsc -p",
-    "js": "dist/index.js"
+    "js": "dist/app.js"
   },
   "repository": {
     "type": "git",
