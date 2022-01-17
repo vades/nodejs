@@ -120,3 +120,8 @@ npm install --save-dev @types/body-parser @types/dotenv @types/express
 - [How to use TypeScript with Node.js](https://www.section.io/engineering-education/how-to-use-typescript-with-nodejs/)
 - Official Website of [Node.js](https://nodejs.org/)
 - [Guides](https://nodejs.org/en/docs/guides/)
+- [Node.js and Rsync](https://medium.com/swlh/how-to-backup-files-using-node-js-and-rsync-bbea20701696)
+- [How to use Node.js to backup iles](https://dev.to/alexeagleson/how-to-use-nodejs-to-backup-your-personal-files-and-learn-some-webdev-skills-along-the-way-541a)
+- [Google Drive Node.js API](https://www.section.io/engineering-education/google-drive-api-nodejs/)
+- [Google Drive API with JavaScript](https://medium.com/@bretcameron/how-to-use-the-google-drive-api-with-javascript-57a6cc9e5262)
+- [Google Sheet into a JSON object](https://gist.github.com/jonobr1/45fc5f41a219153aaa18)
